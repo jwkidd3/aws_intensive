@@ -3,7 +3,7 @@ FROM ubuntu:latest
 #Install Python3 and add it to the bin folder and upgrade to latest version of pip
 
 WORKDIR /app
-
+ARG DEBIAN_FRONTEND=noninteractive
 RUN apt update && apt -y upgrade \
     && apt install -y wget unzip python3-pip python3-venv build-essential libssl-dev \
     libffi-dev python3-dev libxml2-dev libxslt1-dev libpq-dev groff libjpeg-dev libfreetype6-dev zlib1g-dev \
